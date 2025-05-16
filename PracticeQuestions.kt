@@ -151,3 +151,27 @@ fun sub(a: Int, b: Int): Int {
     val diff = a-b
     return diff
 }
+
+/*Solution of 1st ques
+Use the val keyword when the value doesn't change.
+Use the var keyword when the value can change.
+When you define a function, you define the parameters that can be passed to it.
+When you call a function, you pass arguments for the parameters.
+
+Solution of 2nd ques
+New chat message from a friend
+
+Solution of 3rd ques
+Sale - Up to 20% discount on Google Chromecast! Hurry up!
+
+Solution of 4th ques
+The total party size is: 50
+
+Solution of 5th ques
+Congratulations for your bonus! You will receive a total of 6000 (additional bonus).
+
+Solution of 6th ques
+10 + 5 = 15
+10 + 8 = 18
+10 - 5 = 5
+10 - 8 = 2 */

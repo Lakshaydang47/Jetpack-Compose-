@@ -1,0 +1,78 @@
+
+// Default parameters
+// 
+// Gmail has a feature that sends a notification to the user whenever a login attempt is made on a new device.
+
+// In this exercise, you write a program that displays a message to users with this message template:
+
+
+// There's a new sign-in request on operatingSystem for your Google Account emailId.
+// You need to implement a function that accepts an operatingSystem parameter and an emailId parameter, constructs a message in the given format, and returns the message.
+
+// For example, if the function was called with "Chrome OS" for the operatingSystem and "sample@gmail.com" for the emailId, it should return this string:
+
+
+// There's a new sign-in request on Chrome OS for your Google Account sample@gmail.com.
+// Step 1
+// Can you implement the displayAlertMessage() function in this program so that it prints the output displayed?
+
+fun main() {
+    println("Solution of Step 1 ques")
+    Step_1()
+    println("\nSolution of 2nd ques")
+    Step_2()
+}
+
+fun Step_1() {
+    val operatingSystem = "Chrome OS"
+    val emailId = "sample@gmail.com"
+
+    println(displayAlertMessage(operatingSystem, emailId))
+}
+
+// Step 2
+
+// Great job! You displayed the message. However, in some cases, you discover that you can't determine
+//  the user's operating system. In such cases, you need to specify the operating system name as Unknown OS.
+//   You can further optimize the code so that you don't need to pass the Unknown OS argument each time that 
+//   the function is called.
+// Can you find a way to optimize the code with this information so that it prints this output?
+// There's a new sign-in request on Unknown OS for your Google Account user_one@gmail.com.
+// There's a new sign-in request on Windows for your Google Account user_two@gmail.com. 
+// There's a new sign-in request on Mac OS for your Google Account user_three@gmail.com
+
+fun Step_2() {
+    val firstUserEmailId = "user_one@gmail.com"
+    
+    println(displayAlertMessage(emailId = firstUserEmailId))
+    println()
+
+    val secondUserOperatingSystem = "Windows"
+    val secondUserEmailId = "user_two@gmail.com"
+
+    println(displayAlertMessage(secondUserOperatingSystem, secondUserEmailId))
+    println()
+
+    val thirdUserOperatingSystem = "Mac OS"
+    val thirdUserEmailId = "user_three@gmail.com"
+
+    println(displayAlertMessage(thirdUserOperatingSystem, thirdUserEmailId))
+    println()
+}
+
+// Define your displayAlertMessage() below this line.
+fun displayAlertMessage(OS: String = "Unknown", emailId: String): String {
+    return "There's a new sign-in request on $OS for your Google Account $emailId."
+}
+
+//output
+
+//Solution of Step 1 ques
+//There's a new sign-in request on Chrome OS for your Google Account sample@gmail.com.
+
+//Solution of 2nd ques
+//There's a new sign-in request on Unknown for your Google Account user_one@gmail.com.
+
+//There's a new sign-in request on Windows for your Google Account user_two@gmail.com.
+
+//There's a new sign-in request on Mac OS for your Google Account user_three@gmail.com.
